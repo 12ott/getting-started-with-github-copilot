@@ -41,15 +41,44 @@ activities = {
     }
 }
 
-# Add 2,000 uniquely named activities.
-for activity_number in range(1, 2001):
-    activity_name = f"Student Activity {activity_number:04d}"
-    activities[activity_name] = {
-        "description": f"Participate in student activity {activity_number}",
-        "schedule": "Schedule to be announced",
+activities.update({
+    "Art Club": {
+        "description": "Work on drawing, painting, and other creative projects",
+        "schedule": "Wednesdays, 3:30 PM - 4:30 PM",
+        "max_participants": 16,
+        "participants": []
+    },
+    "Debate Team": {
+        "description": "Build public-speaking skills and prepare for tournaments",
+        "schedule": "Mondays, 3:30 PM - 5:00 PM",
+        "max_participants": 18,
+        "participants": []
+    },
+    "Drama Club": {
+        "description": "Rehearse and perform plays for the school community",
+        "schedule": "Tuesdays, 3:30 PM - 5:00 PM",
+        "max_participants": 24,
+        "participants": []
+    },
+    "Environmental Club": {
+        "description": "Organize campus cleanups and sustainability projects",
+        "schedule": "Thursdays, 3:30 PM - 4:30 PM",
         "max_participants": 20,
         "participants": []
+    },
+    "Robotics Club": {
+        "description": "Design, build, and program robots with a team",
+        "schedule": "Mondays and Wednesdays, 3:30 PM - 4:30 PM",
+        "max_participants": 16,
+        "participants": []
+    },
+    "Yearbook Committee": {
+        "description": "Take photos and help put together the school yearbook",
+        "schedule": "Fridays, 3:30 PM - 4:30 PM",
+        "max_participants": 12,
+        "participants": []
     }
+})
 
 
 @app.get("/")
